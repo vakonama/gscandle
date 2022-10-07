@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x:hidden;
+}
+
+#content {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Menu*/
+
+.header {
+    background-color: rgb(255, 255, 255);
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 25pt !important;
+    color: rgb(0, 0, 0) !important;
+    padding-left: 15px;
+}
+
+.burger-menu_button {
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  z-index: 30;
+  width: 55px;
+  height: 55px;
+  border-radius: 35%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_button:hover .burger-menu_lines {
+  filter: brightness(0.7);
+}
+
+.burger-menu_button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #52290d;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu_lines::before {
+  content: '';
+  top: -9px;
+}
+.burger-menu_lines::after {
+  content: '';
+  top: 9px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+  background-color: transparent;
+}
+.burger-menu_active .burger-menu_lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu_lines::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+  padding-top: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #dda98bcc;
+  overflow-y: auto;
+  right: -100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+  right: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_link {
+  padding: 18px 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #52290d;
+  border-bottom: 1px solid #fff;
+}
+.burger-menu_link:first-child {
+  border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+  filter: brightness(0.9);
+  color: #3a1a04;
+}
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#carousel-txt-1, #carousel-txt-2, #carousel-txt-3 {
+    padding-bottom: 23%;
+    font-size:  calc(0.8rem + 2.2vw);
+}
+
+#carousel-txt-1 {
+    color: #52290d;
+    text-shadow: 3px 1px #dda98b;
+}
+
+#carousel-txt-2 {
+    color: #52290d;
+    text-shadow: 3px 1px #dda98b;
+}
+
+#carousel-txt-3 {
+    color: #52290d;
+    text-shadow: 3px 1px #dda98b;
+}
+
+
+@media (min-width: 0px) and (max-width: 520px) {
+       
+    #carousel-txt-1, #carousel-txt-2, #carousel-txt-3 {
+    padding-bottom: 4%;
+    }
+    #first-block-photo {
+        display: none;
+    }
+    #waw-content {
+        padding: 5% 10%;
+    }
+    #waw-txt-1, #waw-txt-3 {
+        text-align: center;
+        min-width: 200px;
+    }
+    #waw-txt-2 {
+        display: none;
+    }
+    #carouselExampleControls {
+        display: none;
+    }
+    .collage {
+        display: none;
+    }
+    div#campaign-vid.embed-responsive.embed-responsive-16by9 {
+        height: 200px;
+    }
+    #video-you {
+        height: 100%;
+        padding: 0 10%;
+    }
+    #buy-photo-elina {
+        display: none;
+    }
+    #buy-txt {
+        padding-bottom: 5%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 521px) and (max-width: 900px) {
+   
+    #carousel-txt-1, #carousel-txt-2, #carousel-txt-3 {
+        padding-bottom: 17%;
+    }
+    #first-block-photo {
+        display: none;
+    }
+    #waw-content {
+        padding: 5% 10%;
+    }
+    #waw-txt-1, #waw-txt-3 {
+        text-align: center;
+        
+    }
+    #waw-txt-2 {
+        display: none;
+    }
+    #catalog.container {
+        max-width: 500px;
+    }
+
+    #carouselExampleControls {
+        display: none;
+    }
+    .collage {
+        display: none;
+    }
+    div#campaign-vid.embed-responsive.embed-responsive-16by9 {
+        height: 300px;
+    }
+    #video-you {
+        height: 100%;
+        padding: 0 10%;
+    }
+    #video-you {
+        height: 100%;
+        padding: 0 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+        #first-block-photo {
+            display: flex;
+            flex-direction: row-reverse;
+            height: 100%;
+            padding-top: 7%;
+    }
+    #line1 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #waw-img-3 {
+        padding-top: 10%;
+    }
+}
+
+/* Row */
+#row {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Introduction */
+#candlemenu {
+    background: url(img/fog3.gif);
+    background-size: cover;
+}
+
+#candlemenu2 {
+    background: url(img/fog3.gif);
+    background-size: cover;
+}
+
+#waw-content {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.waw-img {
+    width: 100%;
+}
+
+#waw-img2 {
+    width: 100%;
+}
+
+#waw-img-3 {
+    padding-bottom: 3%;
+}
+
+#waw-txt-1, #waw-txt-2, #waw-txt-3 {
+    font-size: calc(1.1rem + 0.6vw);
+    margin: 0 auto 0px auto;
+}
+#waw-txt-1, #waw-txt-2, #waw-txt-3 {
+    padding: 5% 0;
+}
+
+#waw-img-3 {
+    width: 100%;
+}
+
+#buy {
+    background: url(img/fog3.gif) center;
+    background-size: cover;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#buy-title {
+    font-size: 46px;
+    margin: 0 auto 0px auto;
+}
+#buy-des {
+    font-size: 26pt;
+    margin:12% auto 0px auto;
+    
+}
+
+#buy-img-1 {
+    width: 100%;
+}
+
+#buy-img-2 {
+    width: 100%;
+}
+
+#buy-img-3 {
+    width: 70%;
+}
+
+
+/*catalog*/
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5%;
+}
+
+#card-text {
+    color: #000000;
+    background: #ffffff7c;
+    
+    font-size: 20px;
+}
+
+#catalog-1, #catalog-2, #catalog-3 {
+    min-width: 250px;
+    padding-bottom: 7%;
+}
+
+
+
+
+/*contacts*/
+.heading-info {
+    font-size: calc(1rem + 0.7vw);   
+}
+
+.info, .contacts {
+    font-size: calc(0.8rem + 0.9vw);
+    text-decoration: none;
+    color: #000000;
+}
+
+.contacts:hover {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+#delivery {
+    padding-top: 6%;
+    padding-bottom: 5%;
+}
+
+/*COLLAGE*/
+.collage {
+    padding-bottom: 5%;
+}
+
+
+
+
+/* Campaign */
+#campaign {
+    background: linear-gradient(rgba(228, 226, 226, 0.124),rgba(228, 226, 226, 0.0)),url(img/candlefon.JPG) no-repeat center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+#campaign-content {
+    padding-top: 8%;
+    padding-bottom: 6%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#campaign-vid {
+    height: 390px;
+}
+
+#campaign-title {
+    font-size: 77px;
+    text-align: center;
+}
+#campaign-des {
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
